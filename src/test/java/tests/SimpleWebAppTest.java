@@ -4,15 +4,19 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SimpleWebAppTest {
 
     @Test
     public void testWebApp() {
+    	
 
+    	WebDriverManager.chromedriver().setup();
+  
         // ChromeDriver path
-        System.setProperty("webdriver.chrome.driver",
-                "C:\\chromedriver\\chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver",
+//                "C:\\chromedriver\\chromedriver.exe");
 
         // HEADLESS MODE (IMPORTANT for Jenkins)
         ChromeOptions options = new ChromeOptions();
