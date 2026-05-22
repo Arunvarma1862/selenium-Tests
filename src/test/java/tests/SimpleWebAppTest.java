@@ -13,10 +13,6 @@ public class SimpleWebAppTest {
     	
 
     	WebDriverManager.chromedriver().setup();
-  
-        // ChromeDriver path
-//        System.setProperty("webdriver.chrome.driver",
-//                "C:\\chromedriver\\chromedriver.exe");
 
         // HEADLESS MODE (IMPORTANT for Jenkins)
         ChromeOptions options = new ChromeOptions();
@@ -29,6 +25,7 @@ public class SimpleWebAppTest {
         driver.get("http://localhost:9090/simple-webapp");
 
         System.out.println("Title: " + driver.getTitle());
+        System.out.println("Excexted login test");
 
         driver.quit();
     }
